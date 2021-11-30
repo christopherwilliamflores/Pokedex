@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="pokemones"></ion-back-button>
+    </ion-buttons>
+    <ion-title>pokemones-delete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <p>
+          This action can't be undone, so please, verify that
+          you know what you are doing before confirming or
+          clicking the button below. Are you sure you want
+          to delte the pokemon? </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="dark" [routerLink]="['/pokemones/view', pokemon_id]" routerDirection="back">No</ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" color="danger" (click)="deletePokemon(pokemon_id)">Yes</ion-button>
+        </ion-col>
+
+
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
